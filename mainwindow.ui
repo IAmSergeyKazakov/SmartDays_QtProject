@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>791</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QLabel" name="currentDate">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>90</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel
+{
+	font: 9pt &quot;Tahoma&quot;;
+	font-size:18px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCalendarWidget" name="calendarWidget">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>130</y>
+        <width>391</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#qt_calendar_calendarview {
+background: rgb(100, 95, 95);
+font: 9pt &quot;Tahoma&quot;;
+font-size:17px;
+color:black;
+outline: 0;
+}
+#qt_calendar_navigationbar {
+background: rgb(100, 95, 95);
+font: 900 9pt &quot;Segoe UI&quot;;
+color:black;
+outline: 0;
+}
+QToolButton {
+	icon-size: 30px, 30px;
+	width: 80px;
+	height: 30px;
+	font: 900 9pt &quot;Segoe UI&quot;;
+	outline: 0;
+}
+QToolButton#qt_calendar_prevmonth {
+background: rgb(100, 95, 95) ;
+width: 40px;
+font: 900 9pt &quot;Segoe UI&quot;;
+outline: 0;
+}
+QToolButton#qt_calendar_nextmonth {
+background: rgb(100, 95, 95) ;
+width: 40px;
+font: 900 9pt &quot;Segoe UI&quot;;
+outline: 0;
+}
+QToolButton#qt_calendar_monthbutton {
+background: rgb(121, 121, 121);
+padding-right: 20px;
+font: 900 9pt &quot;Segoe UI&quot;;
+outline: 0;
+}
+QToolButton#qt_calendar_yearbutton {
+background: rgb(121, 121, 121);
+font: 900 9pt &quot;Segoe UI&quot;;
+outline: 0;
+}
+QToolButton#qt_calendar_monthbutton::menu-indicator{
+	subcontrol-origin: padding;
+	font: 900 9pt &quot;Segoe UI&quot;;
+	subcontrol-position: center right;
+	right: 3px;
+	width: 10px;
+	font: 900 9pt &quot;Segoe UI&quot;;
+	color:black;
+	outline: 0;
+}
+QAbstractItemView {
+font: 900 9pt &quot;Segoe UI&quot;;
+	color: black;
+selection-color: white;
+selection-background-color: rgb(147, 147, 147);
+font: 15px;
+outline: 0;
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableViewForData">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>130</y>
+        <width>401</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableView{
+    background-color: rgb(100, 95, 95);
+	font: 900 9pt &quot;Segoe UI&quot;;
+    alternate-background-color: rgb(141, 163, 215);
+	font-size:15px;
+	outline: 0;
+	color:white;
+}
+
+QHeaderView::section {
+    color: white;
+	font: 900 9pt &quot;Segoe UI&quot;;
+    background-color: rgb(64, 64, 64);
+    border: 5px solid #f6f7fa;
+    border-radius:0px;
+    border-color:rgb(64, 64, 64);
+} 
+
+QTableView::item:selected
+{
+	color: white;
+	background-color: rgb(64, 64, 64);
+    border: 5px solid #f6f7fa;
+    border-radius:0px;
+    border-color: rgb(64, 64, 64);
+}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mainLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel
+{
+	font: 9pt &quot;Tahoma&quot;;
+	font-size:18px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Дела на </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>510</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	font: 900 9pt &quot;Segoe UI&quot;;
+	border: 2px solid black;
+	background-color: rgb(100, 95, 95);
+	font-size: 15px;	
+	border-radius: 15px;	
+	color:black;
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(139, 255, 30);
+}
+
+QPushButton:hover
+{
+	background-color: rgb(130, 130, 130);
+}</string>
+      </property>
+      <property name="text">
+       <string>Добавить</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="removeButton">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>510</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	font: 900 9pt &quot;Segoe UI&quot;;
+	border: 2px solid black;
+	background-color: rgb(100, 95, 95);
+	font-size: 15px;	
+	border-radius: 15px;	
+	color:black;
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(139, 255, 30);
+}
+
+QPushButton:hover
+{
+	background-color: rgb(130, 130, 130);
+}</string>
+      </property>
+      <property name="text">
+       <string>Удалить</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clearButton">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>510</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	font: 900 9pt &quot;Segoe UI&quot;;
+	border: 2px solid black;
+	background-color: rgb(100, 95, 95);
+	font-size: 15px;	
+	border-radius: 15px;	
+	color:black;
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(139, 255, 30);
+}
+
+QPushButton:hover
+{
+	background-color: rgb(130, 130, 130);
+}</string>
+      </property>
+      <property name="text">
+       <string>Очистить</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="firstlabel">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>390</y>
+        <width>341</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel
+{
+	font: 9pt &quot;Tahoma&quot;;
+	font-size:18px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>381</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel
+{
+	font: 9pt &quot;Tahoma&quot;;
+	font-size:25px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Добро пожаловать в SmartDays. </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>450</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel
+{
+	font: 9pt &quot;Tahoma&quot;;
+	font-size:18px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Сегодня</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="today_label">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>450</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel
+{
+	font: 9pt &quot;Tahoma&quot;;
+	font-size:18px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>601</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel
+{
+	font: 9pt &quot;Tahoma&quot;;
+	font-size:20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>записывайте Ваши дела на каждый день!</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
